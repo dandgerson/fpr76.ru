@@ -1,0 +1,25 @@
+{
+  "name": "fpr76.ru",
+  "description": "powerlifting federation 76 site",
+  "main": "index.js",
+  "authors": [
+    "gregoryrubies",
+    "dandgerson"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "powerlifting"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
