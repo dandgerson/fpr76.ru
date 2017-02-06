@@ -1,3 +1,4 @@
+![alt text](https://github.com/dandgerson/fpr76.ru/blob/master/app/img/mainImg.jpg "mainImg")
 ##u need to preinstall it for successfull work with this project:
 
 1. node.js v7.5.0 https://nodejs.org/en/
