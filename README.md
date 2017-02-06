@@ -1,7 +1,8 @@
 ![alt text](https://github.com/dandgerson/fpr76.ru/blob/master/app/img/mainImg.jpg "mainImg")
-##u need to preinstall it for successfull work with this project:
-
-1. node.js "^7.5.0" https://nodejs.org/en/
+##U need to preinstall it for successfull work with this project:
+0. install git https://git-scm.com/
+1. install nodejs "^7.5.0" https://nodejs.org/en/
+  * run in gitbash:
 2. npm i -g
 3. npm i gulp -g
 4. bower i -g
