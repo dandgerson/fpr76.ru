@@ -12,3 +12,51 @@ body {
   width: 100%;
   margin-top: 50px;
 }
+
+.clear {
+  clear: both;
+}
+
+.footer {
+  background-color: #222222;
+  color: white;
+  padding: 15px 0 15px 0;
+  width: 100%;
+}
+
+.footer-banner {
+  width: 15%;
+  float: left;
+  margin: 0;
+  height: 100px;
+  background-color: #cacaca;
+  color: #000;
+}
+
+.footer-banner-right {
+  margin-right: 5%;
+}
+
+.footer-banner-left {
+  margin-left: 5%;
+}
+
+.footer-item {
+  width: 20%;
+  float: left;
+  margin: 0;
+}
+
+.footer-item ul {
+  list-style-type: none;
+}
+
+.copyright {
+  height: 30px;
+  background-color: #CACACA;
+  color: black;
+}
+
+.copyright p {
+  text-align: center;
+}
