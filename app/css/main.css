@@ -1,62 +1,100 @@
-body {
-  background-color: #CACACA;
+.top-line {
+  margin: 0 -15px;
+  height: 100px;
+  background-image: url("../img/mainImg.jpg");
+  background-position: center 0;
+}
+
+.top-line .row {
+  margin: 0 0;
+}
+
+.logo-bord {
+  padding: 0 0;
+}
+
+.logo {
+  height: 100px;
+  background-image: url("../img/mainImg.jpg");
+  background-position: center 0;
+}
+
+.search-social {
+  padding: 0;
+  background-color: #E9E9E9;
+}
+
+.search {
+  float: right;
+  padding: 10px 15px;
+}
+
+.social {
+  float: right;
+  padding: 0px 20px;
+  padding-bottom: 10px;
+}
+
+.social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 34px;
+  height: 32px;
+  background-image: url("../img/social_icon.png");
+  background-size: 176px 34px;
+  background-position: -36px -1px;
+  background-repeat: no-repeat;
+}
+
+#fb {
+  background-position: -36px -1px;
+}
+
+#inst {
+  background-position: -70px -1px;
+}
+
+#tw {
+  background-position: -106px -1px;
+}
+
+#vk {
+  background-position: -1px -1px;
+}
+
+#youtube {
+  background-position: -140px -1px;
 }
 
 .navbar {
   margin: 0;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  background-color: #9848FC;
 }
 
-#mainImg {
-  width: 100%;
-  margin-top: 50px;
+.navbar a {
+  color: #FFFFFF;
 }
 
-.clear {
-  clear: both;
+.navbar a:hover {
+  background-color: #6806CD;
 }
 
-.footer {
-  background-color: #222222;
-  color: white;
-  padding: 15px 0 15px 0;
-  width: 100%;
+.navbar-custom {
+  font-size: 1.3em;
 }
 
-.footer-banner {
-  width: 15%;
-  float: left;
-  margin: 0;
-  height: 100px;
-  background-color: #cacaca;
-  color: #000;
+.navbar-custom a:hover {
+  background-color: #6806CD;
 }
 
-.footer-banner-right {
-  margin-right: 5%;
+.navbar-brand {
+  font-size: 1.6em;
 }
 
-.footer-banner-left {
-  margin-left: 5%;
+.nav a:hover {
+  background-color: #6806CD;
 }
 
-.footer-item {
-  width: 20%;
-  float: left;
-  margin: 0;
-}
-
-.footer-item ul {
-  list-style-type: none;
-}
-
-.copyright {
-  height: 30px;
-  background-color: #CACACA;
-  color: black;
-}
-
-.copyright p {
-  text-align: center;
+.dropdown a:hover {
+  background-color: #6806CD;
 }
