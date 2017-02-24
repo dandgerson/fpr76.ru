@@ -2,23 +2,25 @@ var gulp = require('gulp'),
 		sass = require('gulp-sass'),
 		browserSync = require('browser-sync'),
 		concat = require('gulp-concat'), 
-  	uglify = require('gulp-uglifyjs'),
-  	cssnano = require('gulp-cssnano'),
-  	rename = require('gulp-rename'),
-  	del = require('del'),
-  	imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    cache = require('gulp-cache'),
-    autoprefixer = require('gulp-autoprefixer');
+		uglify = require('gulp-uglifyjs'),
+		cssnano = require('gulp-cssnano'),
+		rename = require('gulp-rename'),
+		del = require('del'),
+		imagemin = require('gulp-imagemin'),
+		pngquant = require('imagemin-pngquant'),
+		cache = require('gulp-cache'),
+		autoprefixer = require('gulp-autoprefixer'),
+		gutil = require( 'gulp-util' ),
+		ftp = require( 'vinyl-ftp' );
 
 
 gulp.task('sass', function(){
 	return gulp.src(['app/sass/**/*.sass', 'app/sass/**/*.scss'])
-	.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+	.pipe(sass({outputStyle: 'expanded',includePaths: require('node-bourbon').includePaths}).on('error', sass.logError))
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true }))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}))
-});
+}); 
 
 gulp.task('browser-sync', function(){
 	browserSync({
@@ -32,7 +34,8 @@ gulp.task('browser-sync', function(){
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/bower/jquery/dist/jquery.min.js',
-		'app/bower/bootstrap/dist/js/bootstrap.min.js'
+		'app/bower/bootstrap/dist/js/bootstrap.min.js',
+		'app/bower/magnific-popup/dist/jquery.jquery.magnific-popup.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -88,8 +91,26 @@ gulp.task('build',['clean', 'img', 'sass','scripts'], function() {
 
 });
 
+gulp.task('deploy', function() {
+
+	var conn = ftp.create({
+		host:      'ftp.dandgerson.com',
+		user:      'dandgerson.com',
+		password:  'e!Cb9Gt2j',
+		parallel:  10,
+		log: gutil.log
+	});
+
+	var globs = [
+	'dist/**'
+	];
+	return gulp.src( globs, {base: 'dist/', buffer: false } )
+		.pipe( conn.newer( 'public_html/' ) )
+		.pipe( conn.dest( 'public_html/' ) ); 
+});
+
 gulp.task('clear', function () {
-    return cache.clearAll();
+		return cache.clearAll();
 });
 
 gulp.task('default', ['watch']);

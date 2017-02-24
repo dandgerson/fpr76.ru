@@ -21,6 +21,7 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
-    "magnific-popup": "Magnific-Popup#^1.1.0"
+    "magnific-popup": "Magnific-Popup#^1.1.0",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }

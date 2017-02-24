@@ -1,0 +1,74 @@
+@import bourbon
+
+.navbar
+	margin: 0!important
+/* menu navigation begin */
+/* цвет фона и рамки навигационного меню */
+.navbar-default 
+	background-color: #393D4E
+	border-color: #1D1D2A
+	border-radius: 0
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand
+	color: white
+
+.icon-home
+	width: 30px
+	height: 30px
+	display: block
+	background-image: url("../img/icon_home.png")
+	background-size: 30px
+	background-repeat: no-repeat
+	&:hover
+		background-image: url("../img/icon_home_lightblue.png")
+		background-size: 31px
+		background-repeat: no-repeat
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus
+	color: lightblue
+
+.navbar-default .navbar-nav > li > a
+	color: white
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus
+	color: lightblue
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus
+	color: white
+	background-color: #727687
+
+.navbar-default .navbar-nav > .active > a:hover
+	color: lightblue
+	background-color: #727687
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus
+	color: lightblue
+	background-color: #727687
+
+.navbar-default .navbar-toggle
+	border-color: white
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus
+	background-color: #727687
+
+.navbar-default .navbar-toggle .icon-bar
+	background-color: white
+
+.navbar-default .navbar-nav .open .dropdown-menu
+	background-color: #727687
+
+.navbar-default .navbar-nav .open .dropdown-menu > li :focus
+	background-color: transparent
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a 
+	color: white
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover
+	color: #393D4E
+	
