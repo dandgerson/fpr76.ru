@@ -35,7 +35,8 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/bower/jquery/dist/jquery.min.js',
 		'app/bower/bootstrap/dist/js/bootstrap.min.js',
-		'app/bower/magnific-popup/dist/jquery.jquery.magnific-popup.min.js'
+		'app/bower/magnific-popup/dist/jquery.jquery.magnific-popup.min.js',
+		'app/bower/bower/owl.carousel/dist/owl.carousel.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
