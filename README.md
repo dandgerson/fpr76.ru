@@ -1,25 +1,4 @@
 
-1. install git https://git-scm.com/
-2. install nodejs "^7.5.0" https://nodejs.org/en/
-
-2 npm i -g
-3 npm i gulp -g
-4 bower i -g
-
-**************************
-
-1 git clone 'rep link'
-2 npm i
-3 bower i
-
-************
-
-### common gulp commands (look into 'gulpfile.js'):
-
-- 'gulp watch' - run 'browser-sync', 'css-libs', 'scripts'  (default command. just run 'gulp')
-- 'gulp build' - creating 'dist' folder with product
-- 'gulp clean' - delete 'dist' folder (automaticaly run when 'gulp build')
-
 # Sketch for Powerlifting Federation website
 
 This is semi-education project aims to build a sketch for Powerlifting Federation website and gain expertize with web development technologies
@@ -58,6 +37,12 @@ To run this project you should have the same **_workflow_** *(look bellow in **W
    2. `npx bower i`
    3. `npx gulp build`
 3. open in browser *`.dist/index.html`*
+
+### common gulp commands (look into 'gulpfile.js'):
+
+- 'gulp watch' - run 'browser-sync', 'css-libs', 'scripts'  (default command. just run 'gulp')
+- 'gulp build' - creating 'dist' folder with product
+- 'gulp clean' - delete 'dist' folder (automaticaly run when 'gulp build')
 
 ## About
 
